@@ -4,6 +4,7 @@ import Main from './components/Layouts/Main';
 import Home from './components/Home/Home';
 import Statistics from './components/Statistics/Statistics';
 import Blog from './components/Blog/Blog';
+import Quiz from './components/Quiz/Quiz';
 
 function App() {
   const router = createBrowserRouter([
@@ -18,6 +19,10 @@ function App() {
           element: <Home></Home>         
         },
         {
+          path: '/quiz/:id',
+          element: <Quiz></Quiz>
+        },
+        {
           path: '/statistics',
           element: <Statistics></Statistics>
         },
@@ -26,6 +31,10 @@ function App() {
           element: <Blog></Blog>
         }
       ]
+    },
+    {
+      path: '*',
+      element: <div>404 cNot Found</div>
     }
   ])
   return (

@@ -1,15 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Quiz from '../Quiz/Quiz';
+import QuizCard from '../QuizCard/QuizCard';
 
 const Home = () => {
     const quizData = useLoaderData();
     //console.log(quizData);
+    const [quizId, setQuizId] = useState(0);
+
+
+    const quizHandler = (id) => {
+        setQuizId(id);
+    }
+
 
     return (
         <div>
         {
-            quizData.data.map(quiz => <Quiz quiz={quiz} key={quiz.id}></Quiz>
+            quizData.data.map(quiz => <QuizCard quiz={quiz} key={quiz.id} quizHandler={quizHandler}></QuizCard>
             )
         }
         </div>
