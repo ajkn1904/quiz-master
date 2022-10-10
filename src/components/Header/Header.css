@@ -1,0 +1,21 @@
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #183027;
+    height: 80px;
+    width:100%;
+    color: white;
+
+}
+.header a{
+    text-decoration: none;
+    color: white;
+    margin: 32px;
+}
+.header a:hover{
+    border-bottom: 2px solid white;
+}
+.header .links{
+    margin-right: 112px;
+}
