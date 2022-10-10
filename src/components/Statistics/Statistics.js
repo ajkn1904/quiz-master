@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Statistics = () => {
+const Statistics = ({quiz}) => {
     return (
-        <div>
+        <div Card >
             <h1>Hello stat.</h1>
         </div>
     );
