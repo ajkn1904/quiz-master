@@ -1,38 +1,56 @@
 import React, { useState } from 'react';
-import Options from '../Options/Options';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 
 const Questions = ({qus}) => {
-    //console.log(qus);
+    const {id, options, question, correctAnswer} = qus;
     
-    const [ans, setAns] = useState('0');
+    const [ans, setAns] = useState('');
+    
     const handleChange = (e) => {
         setAns(e.target.value);
       }
-      console.log(ans);
 
-    const {id, options, question, correctAnswer} = qus;
+      if(ans){
+        if(ans === correctAnswer){
+          //console.log("Right");
+          toast.success("Correct");
+        }      
+        else{
+           // console.log("Wrong")
+            toast.error("Wrong");
+          }
+        } 
+
     return (
         <div>
             <h4>{question}</h4>
 
             <form>
                 <fieldset>
-                    <input type="radio" name='optns' id={options[0]} value={options[0]} onChange={handleChange} checked={ans === options[0]} />
+                    <input type="radio" name='options' id={options[0]} value={options[0]} onChange={handleChange} checked={ans === options[0]} />
                     <label htmlFor={options[0]}>{options[0]}</label><br />
 
-                    <input type="radio" name='optns' id={options[1]} value={options[1]} onChange={handleChange} checked={ans === options[1]} />
+                    <input type="radio" name='options' id={options[1]} value={options[1]} onChange={handleChange} checked={ans === options[1]} />
                     <label htmlFor={options[1]}>{options[1]}</label><br />
 
-                    <input type="radio" name='optns' id={options[2]} value={options[2]} onChange={handleChange} checked={ans === options[2]} />
+                    <input type="radio" name='options' id={options[2]} value={options[2]} onChange={handleChange} checked={ans === options[2]} />
                     <label htmlFor={options[2]}>{options[2]}</label><br />
 
-                    <input type="radio" name='optns' id={options[3]} value={options[3]} onChange={handleChange} checked={ans === options[3]} />
+                    <input type="radio" name='options' id={options[3]} value={options[3]} onChange={handleChange} checked={ans === options[3]} />
                     <label htmlFor={options[3]}>{options[3]}</label><br />
+                    
 
                 </fieldset>
             </form>
-                <h6>{ans === undefined ? 'Please select an option' : `Your ans is: ${ans}`}</h6>
+
+            
+            <h6>{ans === undefined ? 'Please select an option' : `Your answer is: ${ans}`}</h6>
+            
+            <ToastContainer />
+
             
         </div>
     );

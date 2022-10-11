@@ -1,4 +1,3 @@
-//import React, { useEffect, useState } from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
 import Questions from '../Questions/Questions';
 
@@ -6,15 +5,14 @@ const Quiz = () => {
 //   let { id } = useParams();
     
     const quiz = useLoaderData();
-    console.log(quiz.data.questions);
-    
-    console.log(quiz);
+    //console.log(quiz.data.questions);
+
     
     return (
         <div>
             <h1>{quiz.data.name}</h1>
             {
-                quiz.data.questions.map(question => <Questions qus={question}></Questions>)
+                quiz.data.questions.map(question => <Questions qus={question} key={question.id}></Questions>)
             }
 
         </div>
