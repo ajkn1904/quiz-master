@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
-import Quiz from '../Quiz/Quiz';
 import QuizCard from '../QuizCard/QuizCard';
 
 const Home = () => {

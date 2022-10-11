@@ -1,12 +1,22 @@
-import React from 'react';
-import { useParams } from 'react-router-dom';
+//import React, { useEffect, useState } from 'react';
+import { useLoaderData, useParams } from 'react-router-dom';
+import Questions from '../Questions/Questions';
 
 const Quiz = () => {
-    let { id } = useParams();
-    console.log(id);
+//   let { id } = useParams();
+    
+    const quiz = useLoaderData();
+    console.log(quiz.data.questions);
+    
+    console.log(quiz);
+    
     return (
         <div>
-            <h1>hello quiz{id}</h1>
+            <h1>{quiz.data.name}</h1>
+            {
+                quiz.data.questions.map(question => <Questions qus={question}></Questions>)
+            }
+
         </div>
     );
 };
