@@ -19,8 +19,9 @@ const QuizCard = ({quiz}) => {
                 Be a pro in {name} quiz!
                 </Card.Text>
                 <small>Total: {total} questions.</small>
+                <br />
                  
-                <Button variant="primary"><Link to={`/quiz/${id}`}>Start Now
+                <Button variant="dark"><Link to={`/quiz/${id}`}  style={{text: 'white', textDecoration: 'none'}}>Start Now
                 </Link>
                 </Button>
             </Card.Body>

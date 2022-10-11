@@ -26,11 +26,15 @@ const Questions = ({qus}) => {
       }
     } 
 
+    const iconHandler = () => {
+      toast(correctAnswer);
+    }
+
     return (
         <div>
           <div>
           <h4>{question}</h4>
-          <FontAwesomeIcon icon={faEye}></FontAwesomeIcon> 
+          <FontAwesomeIcon icon={faEye} onClick={iconHandler}></FontAwesomeIcon> 
           </div>
 
 
