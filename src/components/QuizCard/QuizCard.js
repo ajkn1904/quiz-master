@@ -18,13 +18,13 @@ const QuizCard = ({quiz}) => {
                 <Card.Text>
                 Be a pro in {name} quiz!
                 </Card.Text>
-                <small>Total {total} quiz.</small>
+                <small>Total: {total} questions.</small>
                  
                 <Button variant="primary"><Link to={`/quiz/${id}`}>Start Now
                 </Link>
                 </Button>
             </Card.Body>
-              
+
         </Card>
         
     );
