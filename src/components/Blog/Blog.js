@@ -6,6 +6,7 @@ const Blog = () => {
     return (
         <div>
             <Container>
+                <h1>Quizzy Blog </h1>
                 <Accordion defaultActiveKey="0">
                     <Accordion.Item eventKey="0">
                         <Accordion.Header>What is the propose of react router?
