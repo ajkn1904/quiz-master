@@ -1,3 +1,5 @@
+import { faEye } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -12,24 +14,28 @@ const Questions = ({qus}) => {
     const handleChange = (e) => {
         setAns(e.target.value);
       }
-
-      if(ans){
-        if(ans === correctAnswer){
-          //console.log("Right");
-          toast.success("Correct");
-        }      
-        else{
-           // console.log("Wrong")
-            toast.error("Wrong");
-          }
-        } 
+        
+    if(ans){
+      if(ans === correctAnswer){
+      //console.log("Right");
+      toast.success("Correct");
+    }      
+    else{
+      // console.log("Wrong")
+      toast.error("Wrong");
+      }
+    } 
 
     return (
         <div>
-            <h4>{question}</h4>
+          <div>
+          <h4>{question}</h4>
+          <FontAwesomeIcon icon={faEye}></FontAwesomeIcon> 
+          </div>
+
 
             <form>
-                <fieldset onChange={handleChange} >
+                <fieldset onClick={handleChange}>
                     <input type="radio" name='options' id={options[0]} value={options[0]} checked={ans === options[0]} />
                     <label htmlFor={options[0]}>{options[0]}</label><br />
                     
@@ -46,14 +52,14 @@ const Questions = ({qus}) => {
                     <label htmlFor={options[3]}>{options[3]}</label><br />
                     
                     
-
+                    <ToastContainer />
                 </fieldset>
             </form>
 
             
             <h6>{ans === undefined ? 'Please select an option' : `Your answer is: ${ans}`}</h6>
             
-            <ToastContainer />
+            
 
             
         </div>
