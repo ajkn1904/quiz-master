@@ -29,18 +29,22 @@ const Questions = ({qus}) => {
             <h4>{question}</h4>
 
             <form>
-                <fieldset>
-                    <input type="radio" name='options' id={options[0]} value={options[0]} onChange={handleChange} checked={ans === options[0]} />
+                <fieldset onChange={handleChange} >
+                    <input type="radio" name='options' id={options[0]} value={options[0]} checked={ans === options[0]} />
                     <label htmlFor={options[0]}>{options[0]}</label><br />
+                    
 
-                    <input type="radio" name='options' id={options[1]} value={options[1]} onChange={handleChange} checked={ans === options[1]} />
+                    <input type="radio" name='options' id={options[1]} value={options[1]} checked={ans === options[1]} />
                     <label htmlFor={options[1]}>{options[1]}</label><br />
+                    
 
-                    <input type="radio" name='options' id={options[2]} value={options[2]} onChange={handleChange} checked={ans === options[2]} />
+                    <input type="radio" name='options' id={options[2]} value={options[2]} checked={ans === options[2]} />
                     <label htmlFor={options[2]}>{options[2]}</label><br />
+                    
 
-                    <input type="radio" name='options' id={options[3]} value={options[3]} onChange={handleChange} checked={ans === options[3]} />
+                    <input type="radio" name='options' id={options[3]} value={options[3]} checked={ans === options[3]} />
                     <label htmlFor={options[3]}>{options[3]}</label><br />
+                    
                     
 
                 </fieldset>

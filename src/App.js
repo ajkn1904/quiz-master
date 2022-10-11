@@ -37,7 +37,7 @@ function App() {
     },
     {
       path: '*',
-      element: <div>404 cNot Found</div>
+      element: <h1>404 cNot Found</h1>
     }
   ])
   return (
