@@ -15,6 +15,7 @@ const Home = () => {
                 <h3>You can play quiz from this website on some topics & get three extra questions on blog.</h3>
             </header>
 
+            <h1>Quiz Topics</h1>
             
         <Container>
             <div className='quiz-cards'>
