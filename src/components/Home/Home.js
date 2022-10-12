@@ -9,6 +9,13 @@ const Home = () => {
     //console.log(quizData);
 
     return (
+        <div>
+           
+            <header>
+                <h3>You can play quiz from this website on some topics & get three extra questions on blog.</h3>
+            </header>
+
+            
         <Container>
             <div className='quiz-cards'>
             {
@@ -17,6 +24,7 @@ const Home = () => {
             }
             </div>
         </Container>
+        </div>
     );
 };
 
