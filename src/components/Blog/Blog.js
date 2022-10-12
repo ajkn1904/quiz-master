@@ -12,7 +12,7 @@ const Blog = () => {
                         <Accordion.Header>What is the propose of react router?
                         </Accordion.Header>
                         <Accordion.Body>
-                        Ans: ReactJS Router is mainly used for developing Single Page Web Applications. React Router isn't just about matching a url to a function or component. It enables the navigation among views of various components in a React Application, allows changing the browser URL, and keeps the UI in sync with the URL.
+                        ReactJS Router is mainly used for developing Single Page Web Applications. React Router isn't just about matching a url to a function or component. It enables the navigation among views of various components in a React Application, allows changing the browser URL, and keeps the UI in sync with the URL.
 
                         </Accordion.Body>
                     </Accordion.Item>
@@ -22,7 +22,7 @@ const Blog = () => {
                     <Accordion.Item eventKey="1">
                         <Accordion.Header>How does context API work?</Accordion.Header>
                         <Accordion.Body>
-                        Ans: Context provides a way to pass data through the component tree without having to pass props down manually at every level. The React Context API is a way for a React app to effectively produce global variables that can be passed around. This is the alternative to "prop drilling" or moving props from grandparent to child to parent, and so on. Context is also touted as an easier, lighter approach to state management using Redux.
+                        Context provides a way to pass data through the component tree without having to pass props down manually at every level. This is the alternative to "prop drilling" or moving props from grandparent to child to parent, and so on. Context is also considered as an easier, lighter approach to state management using Redux.
 
                         </Accordion.Body>
                     </Accordion.Item>
@@ -30,9 +30,9 @@ const Blog = () => {
                     <br/>
 
                     <Accordion.Item eventKey="2">
-                        <Accordion.Header>Usage of useHref() hooks?</Accordion.Header>
+                        <Accordion.Header>Usage of useRef() hooks?</Accordion.Header>
                         <Accordion.Body>
-                        Ans: The useHref hook returns a URL that may be used to link to the given to location, even outside of React Router. The error "useHref() may be used only in the context of a Router component" occurs when we try to use a Link component outside of the Router
+                        The useRef() hooks returns a mutable ref object whose current property is initialized to the passed argument ( initialValue ). It can be used to store a mutable value that does not cause a re-render when updated, access a DOM element directly. If you need some kind of data container throughout the component's lifecycle without causing render cycles on mutating your variable, then useRef() is your solution.
 
                         </Accordion.Body>
                     </Accordion.Item>
