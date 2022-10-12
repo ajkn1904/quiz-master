@@ -1,0 +1,23 @@
+.questions-div{
+    width: 80%;
+    margin: auto;
+    border: 2px solid #183027;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    padding: 15px; 
+    background-color: #18302719;   
+}
+
+.questions-header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.options{
+    margin: 15px 20%;
+}
+span{
+    color: #297b5d;
+}

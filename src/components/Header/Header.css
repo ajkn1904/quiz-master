@@ -1,11 +1,12 @@
+.nav-bar{
+    background-color: #183027;   
+}
+
 .header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #183027;   
-    width:100%;
     color: white;
-    margin-bottom: 100px;
 
 }
 .header a{

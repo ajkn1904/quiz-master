@@ -1,8 +1,10 @@
 import { faEye } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState } from 'react';
+import { Container } from 'react-bootstrap';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import './Questions.css'
 
 
 
@@ -31,29 +33,31 @@ const Questions = ({qus}) => {
     }
 
     return (
-        <div>
-          <div>
-          <h4>{question}</h4>
-          <FontAwesomeIcon icon={faEye} onClick={iconHandler}></FontAwesomeIcon> 
+        <Container className='questions-div'>
+          <div className='questions-header'>
+            <h4>{question}</h4>
+            <span>
+              <FontAwesomeIcon icon={faEye} onClick={iconHandler}></FontAwesomeIcon>
+            </span>
           </div>
 
 
-            <form>
+            <form className='options'>
                 <fieldset onClick={handleChange}>
                     <input type="radio" name='options' id={options[0]} value={options[0]} checked={ans === options[0]} />
-                    <label htmlFor={options[0]}>{options[0]}</label><br />
+                    <label htmlFor={options[0]}> {options[0]} </label><br />
                     
 
                     <input type="radio" name='options' id={options[1]} value={options[1]} checked={ans === options[1]} />
-                    <label htmlFor={options[1]}>{options[1]}</label><br />
+                    <label htmlFor={options[1]}> {options[1]} </label><br />
                     
 
                     <input type="radio" name='options' id={options[2]} value={options[2]} checked={ans === options[2]} />
-                    <label htmlFor={options[2]}>{options[2]}</label><br />
+                    <label htmlFor={options[2]}> {options[2]} </label><br />
                     
 
                     <input type="radio" name='options' id={options[3]} value={options[3]} checked={ans === options[3]} />
-                    <label htmlFor={options[3]}>{options[3]}</label><br />
+                    <label htmlFor={options[3]}> {options[3]} </label><br />
                     
                     
                     <ToastContainer />
@@ -61,12 +65,12 @@ const Questions = ({qus}) => {
             </form>
 
             
-            <h6>{ans === undefined ? 'Please select an option' : `Your answer is: ${ans}`}</h6>
+            <h6><span>{ans === undefined ? 'Please select an option' : `Your answer is: ${ans}`}</span></h6>
             
             
 
             
-        </div>
+        </Container>
     );
 };
 

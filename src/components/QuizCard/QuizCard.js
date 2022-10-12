@@ -2,30 +2,36 @@ import React from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
+import './QuizCard.css'
 
 const QuizCard = ({quiz}) => {
     //console.log(quiz);
     const {id, name, logo, total} = quiz;
 
 
-    return (
-        <Card style={{ width: '18rem', border: '1px solid gray', borderRadius: '8px', margin: '10px' }}>
+    return(
+        <Card className="card-div">
             
-            <Card.Img variant="top" style={{height: '200px', width: '100%', border: '1px solid lightgray', borderRadius: '8px',}} src={logo} alt="" />
+            <div>
+                <Card.Img variant="start" src={logo} alt="" className='card-img' />
+            </div>
             
-            <Card.Body>
-                <h2>{name}</h2>
-                <Card.Text>
-                Be a pro in {name} quiz!
-                </Card.Text>
-                <small>Total: {total} questions.</small>
-                <br />
-                 
-                <Button variant="dark"><Link to={`/quiz/${id}`}  style={{text: 'white', textDecoration: 'none'}}>Start Now
-                </Link>
-                </Button>
-            </Card.Body>
+            
+            <div>
+                <Card.Body>
+                    <h2>{name}</h2>
+                    <Card.Text>
+                    Be a pro in {name} quiz!
+                    </Card.Text>
+                    <small>Total: {total} questions.</small>
+                    <br />
+                    
+                    <Button variant="dark" className="card-btn"><Link to={`/quiz/${id}`} className="card-btn-link">Start Now
+                    </Link>
+                    </Button>
+                </Card.Body>
 
+            </div>
         </Card>
         
     );
